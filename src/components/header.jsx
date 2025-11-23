@@ -1,29 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
-    <header className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 h-[60px] text-white shadow-md flex items-center justify-between px-6">
-      <h1 className="text-2xl font-semibold tracking-wide hover:scale-105 transition-transform duration-300">
-        My Store
-      </h1>
-      <nav className="flex space-x-6 text-sm font-medium">
-        <a
-          href="#home"
-          className="hover:text-yellow-300 transition-colors duration-200"
-        >
-          Home
-        </a>
-        <a
-          href="#products"
-          className="hover:text-yellow-300 transition-colors duration-200"
-        >
-          Products
-        </a>
-        <a
-          href="#contact"
-          className="hover:text-yellow-300 transition-colors duration-200"
-        >
-          Contact
-        </a>
-      </nav>
+    <header className="w-full h-[70px] flex justify-center items-center bg-gray-100">
+      <div className="w-[500px] h-full flex items-center justify-evenly text-pink-400 text-xl">
+        <Link to="/">Home</Link>
+      <Link to="/products">Products</Link>
+      <Link to="/contact">Contact Us</Link>
+      <Link to="/reviews">Reviews</Link>
+      </div>
     </header>
   );
 }
